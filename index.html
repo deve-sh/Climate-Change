@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climate Change is Real</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- D3.js -->
+	<script src="js/d3.min.js" charset="utf-8"></script>
+	<script src="js/topojson.js"></script>
+	<script src="js/datamaps.js" charset="utf-8"></script>
+
+	<!-- Fonts and Styles -->
+	<link rel="icon" href="./files/favicon.png">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+</head> 
+<body>
+	<div id='intro'>
+		<span id='typist'></span> <span id='cursor'>_</span>
+		<br/>
+		<span id='believe'>Unless you choose not to believe in it.</span>
+		<br/><br/><br/><br/><br/>
+		<span id='scroller'>Go On ...</span>
+	</div>
+
+	<div align="center" id='second'>
+		<br/><br/>
+		<div id="weatherRadial"></div>
+		<br/><br/>
+	</div>
+
+	<div id="third" align="center">
+		<br/><br/>
+		<h2 id='thirdintro' style="color: #ffffff">A Look At it Country By Country</h2>
+		<div id='worldmap'></div>
+		<br/>
+		<img src="./files/pollution.png" alt="Pollution Scale" />
+		<br/>
+		<br/>
+	</div>
+
+	<div id="fourth" align="center">
+		<h2><b>See it for yourself.</b></h2>
+		<br/>
+		<form id='estimator' onsubmit="estimator(event,this.children[0].value)">
+			<input type="number" name="year" placeholder="Enter the Year To Estimate Average Temperature." min="1600" max="2200">
+			<br/><br/>
+			<button id='submit' type="submit">Estimate</button>
+		</form>
+		<br/>
+		<div align="center"><div id='tempcard'></div></div>
+	</div>
+
+	<footer>
+		<div class="right"><a href="https://github.com/deve-sh/ClimateChange" target="_blank">Source Code</a></div>
+	</footer>
+
+	<!-- Execution Scripts -->
+
+	<script src="js/scripts.js"></script>
+	<script src="js/domscripts.js"></script>
+	<script src="js/worldscripts.js"></script>
+	<script src="js/lineartrend.js"></script>
+</body>
+</html>

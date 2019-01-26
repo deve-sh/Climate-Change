@@ -1,0 +1,386 @@
+/* Fonts */
+
+@font-face{
+    font-family: 'Montserrat';
+    src : url('../files/Montserrat.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src : url('../files/opensans.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Major Mono Display';
+    src : url('../files/majormono.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    fill: #8C8C8C;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: 'Montserrat','Open Sans',sans-serif;
+    color: #C4C4C4;
+    text-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    background: #191919; /*#fcfcfa; #a9a9a9  #090909*/
+}
+
+/* INTRO Element */
+
+#intro{
+    color: #ffffff;
+    background: linear-gradient(25deg, #202020 45%, #212121 45%);
+    min-height: 100vh;
+    padding: 1rem;
+    padding-top: 35vh;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+#typist{
+    font-size: 4em;
+    font-family: 'Montserrat';
+}
+
+#cursor{
+    font-family: 'Montserrat';
+    font-size: 4em;
+    animation: fader 1s step-end infinite;
+    -webkit-animation : fader 1s step-end infinite;
+}
+
+@keyframes fader{
+    from,to{color: transparent;}
+    50%{color: #ffffff;}
+}
+@-webkit-keyframes fader{
+    from,to{color: transparent;}
+    50%{color: #ffffff;}
+}
+
+
+#intro #believe{
+    font-size: 1em;
+    color: #C4C4C4;
+    font-family : 'Major Mono Display', monospace;
+}
+
+#scroller{
+    color: #C4C4C4;
+    font-size: 0.7em;
+    animation-name: fades;
+    -webkit-animation-name:fades;
+    animation: 1s linear infinite;
+    -webkit-animation : 1s linear infinite;
+}
+
+@keyframes fades{
+    from,to{transform: translateY(0);}
+    30%{transform: translateY(-40px);}
+    50%{transform: translateY(-30px);}
+}
+
+@-webkit-keyframes fades{
+    from,to{transform: translateY(0);}
+    30%{transform: translateY(-45px);}
+    50%{transform: translateY(-30px);}
+}
+
+/* D3.JS Elements */
+
+#weatherRadial{
+    min-width: 100%;
+    max-width: 100%;
+    background: #191919;
+    padding: 1.5rem;
+    min-height: 100vh;
+}
+
+#weatherRadial svg{
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 26px;  /*28px*/
+    fill: #C4C4C4; /*#4F4F4F;*/
+    font-weight: 300;
+    text-anchor: start;
+}
+
+.subtitle {
+    font-size: 14px;
+    fill: #AAAAAA;
+    font-weight: 300;
+    text-anchor: start;
+}
+
+.credit {
+    font-size: 12px;
+    fill: #AAAAAA;
+    font-weight: 300;
+    text-anchor: start;
+}
+
+.axis path,
+.axis tick,
+.axis line {
+    fill: none;
+    stroke: none;
+    /*shape-rendering: crispEdges;*/
+    shape-rendering: geometricPrecision;
+    /*shape-rendering: auto;*/
+}
+
+.axis text {
+    font-size: 12px;
+    fill: #AAAAAA;
+    font-weight: 400;
+}
+
+.legendTitle {
+    font-size: 14px;
+    fill: #AAAAAA;  /*#4F4F4F;*/
+    font-weight: 300;
+}
+
+.january {
+    font-size: 14px;
+    text-anchor: start;
+    font-weight: 300;
+    fill: #AAAAAA;
+}
+
+.yearText {
+    font-size: 18px;
+    text-anchor: start;
+    font-weight: 300;
+    fill: #AAAAAA;
+}
+
+.yearLine {
+    stroke: #AAAAAA;
+}
+
+.axisText {
+    fill: #C4C4C4;
+    font-size: 11px;
+    font-weight: 300;
+    text-anchor: middle;
+}
+
+.axisCircles {
+    fill: none;
+    stroke: #E8E8E8;
+    stroke-width: 1.25px;  /* 1px */
+    /*shape-rendering: geometricPrecision;*/
+    /*shape-rendering: crispEdges;*/
+    shape-rendering: auto;
+}
+.line {
+    fill: none;
+    /*stroke: red;*/  /*lightgreen;*/
+    stroke-width: 2.3px;  /*1.5px; 1.25px 2.5px 2.75*/
+    /*shape-rendering: crispEdges;*/
+    shape-rendering: geometricPrecision;
+}
+.path {
+    /*stroke: steelblue;*/
+    fill: none;
+    stroke-width: 3px;
+}
+
+.play {
+    font: 500 35px sans-serif;  /* 40px */
+    fill: #e5e5e5; 
+    cursor: pointer;
+}
+.play:hover {
+    fill: #ccc;
+}
+
+/* Third */
+
+#third{
+    background: #165caa;
+    padding: 0;
+    overflow: auto;
+}
+
+#worldmap{
+    padding-top: 0rem;
+    max-width: 80%;
+    position: relative;
+}
+
+/* Estimation Area */
+
+#fourth{
+    height: auto;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 1.5rem;
+    text-align: center;
+    color: #343434;
+    background: #f6f7f8;
+}
+
+#estimator{
+    padding: 0.5rem;
+    color: #ffffff;
+}
+
+#estimator input{
+    background: #212121;
+    padding: 1rem;
+    outline: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    width: 60%;
+    border: 0.1rem solid #212121;
+    border-radius: 0.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+#estimator #submit{
+    padding: 1rem;
+    font-size: 1em;
+    font-family: 'Montserrat',sans-serif;
+    border: 0.1em solid #212121;
+    border-radius: 0.1em;
+    color: #212121;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+    background: transparent;
+}
+
+#estimator #submit:hover,#estimator #submit:focus{
+    background: #212121;
+    color: #ffffff;
+}
+
+#tempcard{
+    background: #212121;
+    color: #ffffff;
+    display: none;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 7px 0px;
+    border-radius: 0.1em;
+}
+
+footer{
+    color: #ffffff;
+    background: #101010;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    text-align: left;
+}
+
+footer .left{
+    padding: 2rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    float: left;
+    width: 50%;
+}
+
+footer .right{
+    background: #191919;
+    padding: 2rem;
+    width: 50%;
+    text-align: right;
+    float: right;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer a{
+    color: #ffffff;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1000px){
+    #intro{
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+
+    #typist{
+        font-size: 3em;
+    }
+
+    #cusror{
+        font-size: 3em;
+    }
+
+    #tempcard{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #intro{
+        padding-top: 30vh;
+        min-height: 80vh;
+        max-height: 90vh;
+    }
+
+    #typist{
+        font-size: 1.7em;
+    }
+
+    #cursor{
+        font-size: 1.7em;
+    }
+
+    #intro #believe{
+        font-size: 0.6em;
+    }
+
+    #scroller{
+        display: none;
+    }
+
+    #third{
+        max-height: 100vh;
+    }
+
+    #estimator input{
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #tempcard{
+        width: 100%;
+        font-size: 1.2em;
+        padding: 1rem;
+    }
+}
