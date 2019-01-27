@@ -327,7 +327,7 @@ footer a{
 
 /* Responsive */
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) and (min-height: 600px){
     #intro{
         min-height: 100vh;
         max-height: 100vh;
@@ -346,7 +346,7 @@ footer a{
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px) and (min-height: 300px),(max-height: 450px) and (max-width: 900px){  /* Phones */
     #intro{
         padding-top: 30vh;
         min-height: 80vh;
@@ -355,6 +355,17 @@ footer a{
 
     #typist{
         font-size: 1.7em;
+    }
+
+    #weatherRadial{
+        max-height: 150vh;
+        padding: 0;
+        width: 100vw;
+    }
+
+    #weatherRadial svg g{
+        width: 100%;
+        padding: 0;
     }
 
     #cursor{
@@ -370,7 +381,11 @@ footer a{
     }
 
     #third{
-        max-height: 100vh;
+        height: auto;
+    }
+
+    #worldmap{
+
     }
 
     #estimator input{
