@@ -24,7 +24,7 @@ var estimator = (e,year=2010) => {
 	document.getElementById('tempcard').style.display="inline-block";
 
 	if(!isNaN(str))			// If the result is a number.
-		document.getElementById('tempcard').textContent = [...str].slice(0,5).join('');	// Round off to 2 or 3 decimal places.
+		document.getElementById('tempcard').innerHTML = [...str].slice(0,5).join('') + " &#8451;";	// Round off to 2 or 3 decimal places.
 	else
 		document.getElementById('tempcard').textContent = str;		// Print the message.
 }
