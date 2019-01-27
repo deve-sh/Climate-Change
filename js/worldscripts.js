@@ -58,7 +58,7 @@ var map = new Datamap({
        //bubbles, custom popup on hover template
      map.bubbles([
        {name: 'The Biggest Pollutant of All Time', latitude: 39.913818, longitude: 116.363625, radius: 10, fillKey: 'extreme'},
-       {name: 'Least Polluting. Just Because They don\'t have any to begin with.', latitude: -25.32, longitude: 120.32, radius: 9, fillKey: 'defaultFill'},
+       {name: 'Least Polluting. Just Because They didn\'t have anything to begin with.', latitude: -25.32, longitude: 120.32, radius: 9, fillKey: 'defaultFill'},
        {name: 'God.. Its Already Hot here!', latitude: 23.4162, longitude: 25.6628, radius: 8, fillKey: 'extreme'},
        {name: 'We are Here... And Screwed!', latitude: 18.5204, longitude: 73.8567, radius: 8, fillKey: 'extreme'},
        {name: "Trump Claims Humans Don't cause Climate Change. What an Idiot?!",latitude:38.9072, longitude: -77.0369,radius: 8 ,fillKey : 'extreme'}
